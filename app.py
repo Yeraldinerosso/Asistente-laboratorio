@@ -86,7 +86,7 @@ opcion = st.sidebar.radio("Ir a:", ["Inicio", "Cálculos de concentración", "C�
 if opcion == "Inicio":
     st.title("🧠 Asistente de Laboratorio Inteligente")
     st.write("""
-    Herramienta interactiva para realizar cálculos químicos esenciales:
+    Herramienta interactiva para cálculos comunes en química de laboratorio y consultas a un asistente IA especializado:
     - Cálculos de concentración
     - Cálculos estequiométricos
     - Cálculos de rendimientos
@@ -255,4 +255,6 @@ if opcion == "Asistente IA":
             st.markdown("### 💡 Respuesta de la IA:")
             st.write(respuesta)
         else:
-            st.warning("Por favor escribe una consulta antes de enviar.")
+            st.warning("Por favor escribe una consulta antes de enviar.") 
+
+
