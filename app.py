@@ -235,7 +235,7 @@ client = OpenAI(
 def consultar_ia(pregunta):
     respuesta = client.responses.create(
         model="gpt-4o-mini",
-        input=f"Eres un asistente experto en química de laboratorio en español. "
+        input=f"Eres un asistente experto en química de laboratorio en español. Da respuestas cortas, claras y precisas. No superes las 385 palabras "
               f"Responde en lenguaje natural sobre preparación de soluciones, fundamentos teóricos y normas de seguridad. "
               f"Pregunta: {pregunta}",
         max_output_tokens=400,
@@ -256,5 +256,6 @@ if opcion == "Asistente IA":
             st.write(respuesta)
         else:
             st.warning("Por favor escribe una consulta antes de enviar.") 
+
 
 
