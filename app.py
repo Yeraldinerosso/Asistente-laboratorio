@@ -258,4 +258,3 @@ if opcion == "Asistente IA":
             st.warning("Por favor escribe una consulta antes de enviar.") 
 
 
-
