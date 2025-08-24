@@ -235,8 +235,11 @@ client = OpenAI(
 def consultar_ia(pregunta):
     respuesta = client.responses.create(
         model="gpt-4o-mini",
-        input=f"Eres un asistente experto en química de laboratorio en español. Da respuestas cortas, claras y precisas. No superes las 385 palabras "
-              f"Responde en lenguaje natural sobre preparación de soluciones, fundamentos teóricos y normas de seguridad. "
+        input=f"""Eres un asistente experto en química de laboratorio. 
+Responde en español de forma clara, directa y coherente con la pregunta. 
+Da respuestas breves, sin extenderte innecesariamente (máximo 385 palabras). 
+Tienes conocimientos en preparación de soluciones, fundamentos teóricos y normas de seguridad, 
+pero solo menciónalos si son relevantes para la pregunta."""
               f"Pregunta: {pregunta}",
         max_output_tokens=400,
         temperature=0.3
